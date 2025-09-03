@@ -1,19 +1,415 @@
-body { margin: 0; font-family: Arial, sans-serif; background: #f4f4f9; }
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: linear-gradient(90deg, indigo, purple); }
-.navbar .logo { color: white; font-weight: bold; }
-.nav-links { list-style: none; display: flex; }
-.nav-links li { margin: 0 10px; }
-.nav-links a { color: white; text-decoration: none; font-weight: bold; }
-.nav-links a:hover { color: #ffccff; }
-.burger { display: none; font-size: 24px; cursor: pointer; color: white; }
-.grid { display: flex; flex-wrap: wrap; gap: 15px; }
-.card { background: white; border-radius: 8px; padding: 15px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.card img { width: 100%; border-radius: 5px; }
-button { background: purple; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; }
-button:hover { background: indigo; }
-
-@media (max-width: 768px) {
-  .nav-links { display: none; flex-direction: column; background: indigo; position: absolute; top: 50px; right: 0; width: 200px; }
-  .nav-links.show { display: flex; }
-  .burger { display: block; }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+body{
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    background-color: #59316b;
+    /* min-height: 150vh; */
+}
+html{
+  scroll-behavior: smooth;
+}
+/* ===============
+Buttons
+================== */
+.y-btn{
+  background-color:#FFBF00;
+  color: black;
+  font-weight: 700;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  
+}
+.y-btn:hover{
+  background-color: white;
+  /* color: black; */
+}
+.wb-btn{
+  background: none;
+  border: 1px solid white;
+  padding: 10px 12px;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+.wb-btn:hover{
+  background-color: white;
+  color: black;
+}
+
+
+
+/* ===================================================================
+Header
+======================================================================*/
+header {
+  width: 100%;
+  border-bottom: 1px solid rgba(2, 2, 2, 0.123);
+  /* position: sticky;
+  top: 0;
+  z-index: 1000; */
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    flex-wrap: wrap;
+}
+
+.logoline{
+    margin-top: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: light;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+    padding: 8px 12px;
+}
+.contact-btn {
+    background-color: #FFBF00;
+    color: black;
+    font-weight: 700;
+} 
+/* burget menu */
+.burger-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+.burger-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+/* ------------------Active state for burger menu----------------------- */
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+        
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ===================================================================
+ HERO SECTION
+======================================================================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(14px, 1.8vw, 22px);
+  align-items: center;
+  padding: 58px 0;
+  width: min(1100px, 92%);
+  margin-inline: auto;
+
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.title {
+  font-family: verdana light;
+  color:white;
+  font-size: clamp(3.3rem, 4.2vw, 3.2rem);
+  line-height: 1.2;
+  margin: 14px 0 10px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.sub {
+  color: rgb(220, 207, 207);
+  font-size: clamp(1rem, 1.2vw, 1.05rem);
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+/* ---------------------------------Glass------------------------------ */
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.avatar {
+  aspect-ratio: 1.1/1;
+  width: 100%;
+  border-radius: 16px;
+  background: 
+    radial-gradient(400px 200px at 30% 10%, rgba(124, 58, 237, 0.35), transparent 60%),
+    radial-gradient(380px 190px at 80% 20%, rgba(6, 182, 212, 0.35), transparent 60%),
+    linear-gradient(180deg, #0f1524, #0f1524);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar .ring {
+  position: absolute;
+  inset: 14px;
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.331);
+}
+
+.avatar svg {
+  width: 48%;
+  opacity: 0.9;
+}
+/* ======================================================================
+About US
+========================================================================= */
+.about {
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: min(1100px, 92%);
+  margin-inline: auto;
+
+}
+.vision-container{
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: clamp(14px, 1.8vw, 22px);
+  padding: 8rem 3rem 0;
+}
+.h-cont{
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  border-right: 3px solid #59316b;
+  padding-right: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+
+}
+/* ------------------------Animation---------------------- */
+
+.skills-container {
+  background-color: black;
+  border: 5px solid rgba(255, 255, 255, 0.925);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+        
+.skills-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee 10s linear infinite;
+  padding: 15px 0;
+
+}
+        
+.skill {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.img-cont{
+  height: 10rem;
+  width: 15rem;
+  background-color: wheat;
+  border-bottom: 1px solid white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+.img-cont img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.skill-desc{
+  background-color: white;
+  color: black;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+@keyframes marquee {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+.pause .skills-track {
+  animation-play-state: paused;
+}
+
+.play-pause-button{
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+}
+/* ======================================================================
+LOOK SECION
+========================================================================= */
+.look{
+  width: min(1100px, 95%);
+  margin-inline: auto;
+  padding-bottom: 30rem;
+}
+.look-h-cont{
+  display: inline-flex;
+  border-bottom: 3px solid white;
+  
+}
+.look-h{
+  display: inline-flex;
+  flex-direction: column;
+}
+.look-h h1{
+  color: white;
+  font-family: verdana;
+  font-size: 5rem;
+}
+
+.look-h-cont span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#FFBF00;
+  font-size: 10rem;
+  font-family: verdana;
+ 
+}
+
+.look h4{
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: larger;
+
+}
+.look-btns{
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  justify-content: space-around;
+}
+.look-btn-1{
+  background-color: #FFBF00;
+  color: black;
+  font-weight: 700;
+  padding: 15px 70px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+
+}
+.look-btn-1:hover{
+  background-color: white;
+}
+.look-btn-2{
+  /* background-color: #FFBF00; */
+  background: none;
+  border: 1px solid white;
+  padding: 15px 70px;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.look-btn-2:hover{
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
+/* =================
+Meda Queries
+==================== */
+
+

@@ -1,0 +1,153 @@
+@media ( max-width: 495px) {
+header{
+    position: fixed;
+    z-index: 100;
+    background-color: #59316b;
+    border-bottom: 1px solid white;
+}
+.nav-container{
+    padding: 5px 15px;
+}
+.burger-menu {
+    display: flex;
+    /* margin-top: 17px; */
+    
+}
+nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 0;
+    padding: 15px 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+}
+        
+nav.active {
+    display: flex;
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+        
+nav a {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0;
+    margin: 0;
+}
+        
+nav a:hover {
+    padding: 15px;
+}
+        
+.contact-btn {
+    margin-top: 10px;
+}
+/* ======================= 
+Hero Section-max-495
+===========================*/
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+}
+/* ======================= 
+About Section-max-495
+===========================*/
+.about{
+    width: 100%;
+}
+.h-cont{
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    
+}
+.h-cont h1{
+    text-transform: uppercase;
+}
+#h-cont-1{
+    display: none;
+}
+/* .look-btns{
+    display: flex;
+    flex-direction: column;
+    
+} */
+.look-btn-1{
+    padding: 15px 20px;
+}
+.look-btn-2{
+    padding: 15px 20px;
+    
+}
+}
+
+
+
+
+
+@media (min-width: 496px) and (max-width: 840px) {
+
+.burger-menu {
+    display: flex;
+    /* justify-self: end; */
+}
+
+nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 0;
+    padding: 15px 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+}
+        
+nav.active {
+    display: flex;
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+        
+nav a {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0;
+    margin: 0;
+}
+        
+nav a:hover {
+    padding: 15px;
+}
+        
+.contact-btn {
+    margin-top: 10px;
+}
+/* ======================= 
+Hero Section
+===========================*/
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ========================
+ABOUT SECTION
+=========================== */
+.about{
+    width: 100%;
+}
+.h-cont{
+    font-size: 1rem;
+}
+}
