@@ -1,0 +1,76 @@
+.ad-login-h{
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem 0 1rem;
+    font-size: 3rem;
+    font-family: verdana;
+}
+.ad-login-form-container{
+    display: flex;
+    justify-self: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.763);
+    padding: 2rem 4rem;
+    border-radius: 7px;
+    margin: 2rem 0;
+}
+.ad-login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* align-items: center; */
+}
+.ad-login-form input{
+  padding: 12px;
+  width: 22rem;
+  border: none;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-family: verdana;
+  display: flex;
+  justify-self: center;
+  
+}
+.ad-login-form input:focus{
+    outline: 3px solid #59316b;
+}
+.ad-login-form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px black inset !important;
+    -webkit-text-fill-color: white !important;
+    font-family: verdana;
+}
+
+.ad-login-form input::placeholder{
+    color: rgba(255, 255, 255, 0.719);
+    font-family: verdana;
+}
+
+.form-btn{
+    /* display: inline; */
+    width: min-content;
+    padding: 12px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: #FFBF00;
+    color: black;
+    font-family: verdana;
+    font-weight: bolder;
+
+}
+.form-btn:hover{
+    cursor: pointer;
+}
+
+/* ============================================= */
+@media ( max-width: 495px) {
+    .ad-login-h{
+        padding: 8rem 1rem 0 1rem;
+        /* text-align: left; */
+    }
+    .ad-login-form-container{
+        padding: 2rem 1rem;
+    }
+}

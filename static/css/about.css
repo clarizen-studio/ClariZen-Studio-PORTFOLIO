@@ -1,0 +1,22 @@
+.about-page{
+  width: min(1100px, 95%);
+  margin-inline: auto;
+}
+.about-page-he-cont{
+    color: white;
+    font-size: 2.2rem;
+    font-family: verdana light;
+}
+
+.about-page-desc{
+    width: min(65%);
+    /* margin-inline: auto; */
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.35);
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: larger;
+    text-align: justify;
+    
+}
