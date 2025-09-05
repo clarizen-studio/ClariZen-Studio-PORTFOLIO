@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Admin Panel</h1>
-
-<h2>Add Project</h2>
-<form method="POST" enctype="multipart/form-data">
-  <input type="text" name="title" placeholder="Project Title"><br>
-  <textarea name="description" placeholder="Description"></textarea><br>
-  <input type="file" name="image"><br>
-  <button type="submit">Add Project</button>
-</form>
+<h3 class="adp-h">Admin Panel</h3>
+<section class="admin-panel-sec">
+  <div class="addproject-container">
+    <h3 class="addproject-h">Add a Project</h3>
+    <form action="" method="POST" class="addproject-form">
+        <input type="text" name="title" placeholder="Project Title" required>
+        <textarea name="description" placeholder="Description" required></textarea>
+        <label for="file-upload" class="file-upload-btn">📂 Upload Image</label>
+        <input type="file" name="image" id="file-upload">
+        <button class="addproject-btn">Add</button>
+        
+    </form>
+</div>
+</section>
 
 <h2>Projects</h2>
 <ul>
