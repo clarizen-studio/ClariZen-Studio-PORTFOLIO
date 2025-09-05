@@ -1,11 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="projects-sec">
-  <div class="projects-h">
-    <h1>Projects</h1>
+  <div class="projects-h-cont">
+    <h1 class="projects-h">Projects</h1>
+    <div class="projects-span">
+      <span>ClariZen Studio's Projects clearly shows;How much passionate are we; in our Work .</span>
+    </div>
   </div>
+  <!-- Projects Grid ( boxes ) -->
+    <div class="projects-grid">
+    {% for p in projects %}
+      <article class="card">
+          <div class="image-container">
+            <img src="{{ p[3] }}" alt="{{ p[1] }}">
+          </div>
+          <div class="card-body">
+            <span class="project-title">{{ p[1] }}</span>
+            <span class="project-desc">{{ p[2] }}</span>
+          </div>
+      </article>
+      {% endfor %}
+    </div>
 </section>
-
 <!-- <h1>Our Projects</h1>
 <div class="grid">
   {% for p in projects %}
