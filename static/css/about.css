@@ -2,21 +2,28 @@
   width: min(1100px, 95%);
   margin-inline: auto;
 }
-.about-page-he-cont{
-    color: white;
-    font-size: 2.2rem;
-    font-family: verdana light;
+.about-page-h-cont{
+  color: white;
+  font-size: 2.2rem;
+  font-family: verdana light;
+  /* background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent; */
 }
 
 .about-page-desc{
-    width: min(65%);
-    /* margin-inline: auto; */
-    margin: 2rem 0;
-    background-color: white;
-    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.35);
-    padding: 2rem;
-    border-radius: 10px;
-    font-size: larger;
-    text-align: justify;
+  width: min(65%);
+  /* margin-inline: auto; */
+  margin: 2rem 0;
+  /* background-color: white; */
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: white;
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.35);
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: larger;
+  text-align: justify;
     
 }

@@ -1,8 +1,6 @@
 @media ( max-width: 495px) {
 header{
-    position: fixed;
-    z-index: 100;
-    background-color: #59316b;
+    /* z-index: 100; */
     border-bottom: 1px solid white;
 }
 .nav-container{
@@ -54,7 +52,7 @@ Hero Section-max-495
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
 }
 /* ======================= 
 About Section-max-495

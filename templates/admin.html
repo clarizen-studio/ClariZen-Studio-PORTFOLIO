@@ -1,33 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
+<span class="anchor-span"><a href="/logout" class="logout-btn">Logout</a></span>
 <h3 class="adp-h">Admin Panel</h3>
-<section class="admin-panel-sec">
+<section class="admin-project-sec">
   <div class="addproject-container">
     <h3 class="addproject-h">Add a Project</h3>
-    <form action="" method="POST" class="addproject-form">
+    <form action="" method="POST" class="addproject-form" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Project Title" required>
         <textarea name="description" placeholder="Description" required></textarea>
         <label for="file-upload" class="file-upload-btn">📂 Upload Image</label>
         <input type="file" name="image" id="file-upload">
         <button class="addproject-btn">Add</button>
-        
     </form>
-</div>
+  </div>
+  <div class="project-container">
+    <h3 class="addproject-h">Uploaded Projects</h3>
+    <div class="projects">
+      {% for p in projects %}
+      <ul>
+            <li>{{ p[1] }}</li>
+            <div class="ul-btns">
+              <a href="#" class="edit-btn">Edit</a>
+              <a href="/delete/{{ p[0] }}" class="delete-btn">Delete</a>
+            </div>
+          </ul>
+          {% endfor %}
+          
+    </div>
+  </div>
+</section>
+<section class="admin-msg-sec">
+    <h3 class="addproject-h">Message Box</h3>
+  <div class="msg-box-container">
+    {% for m in messages %}
+    <div class="msg-box">
+      <span><strong>Name:</strong> {{ m[1] }} </span>
+      <span><strong>Email Adress:</strong> {{ m[2] }} </span>
+      <span><strong>Message:</strong> {{ m[3] }} </span>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
-<h2>Project</h2>
+<!-- <h2>Projects</h2>
 <ul>
   {% for p in projects %}
     <li>{{ p[1] }} - <a href="/delete/{{ p[0] }}">Delete</a></li>
   {% endfor %}
-</ul>
+</ul> -->
 
-<h2>Messages</h2>
+<!-- <h2>Messages</h2>
 <ul>
   {% for m in messages %}
     <li>{{ m[1] }} ({{ m[2] }}): {{ m[3] }}</li>
   {% endfor %}
-</ul>
+</ul> -->
 
-<a href="/logout">Logout</a>
 {% endblock %}
