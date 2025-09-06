@@ -1,10 +1,131 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Our Services</h1>
-<ul>
-  <li>Logo Design</li>
-  <li>Brand Identity</li>
-  <li>Web Development</li>
-  <li>Social Media Design</li>
-</ul>
+
+    <!-- <section class="about"> -->
+    <div class="services-card" role="region" aria-label="Services">
+      <div class="services-list" id="servicesList">
+        <h1>Our Services</h1>
+
+        <!-- Generate 8 services -->
+        <div class="service-item" data-index="1">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-1">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <!-- <div class="service-index">1</div> -->
+            <div class="service-title">Graphic Design</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-1" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 1 — Overview</strong> -->
+              <p>
+                Graphic design that communicates ideas with clarity, creativity, and impact.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item" data-index="2">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-2">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <!-- <div class="service-index">2</div> -->
+            <div class="service-title">Logo Design</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-2" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 2 — Overview</strong> -->
+              <p>
+                Memorable and timeless logos that represent your brand identity
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item" data-index="3">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-3">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <div class="service-title">Brand Identity Design</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-3" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 3 — Overview</strong> -->
+              <p>
+                 Complete branding solutions including business cards, flyers, posters, banners, and corporate stationery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item" data-index="4">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-4">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <div class="service-title">Packaging Design</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-4" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 4 — Overview</strong> -->
+              <p>
+                Strategic packaging design that elevates brand value, ensures functionality, and creates a lasting impression.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item" data-index="5">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-5">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <div class="service-title">Social Media Design</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-5" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 5 — Overview</strong> -->
+              <p>
+                 Engaging post designs, ad creatives, and digital content for all platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item" data-index="6">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-6">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <div class="service-title">Website Development</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-6" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 6 — Overview</strong> -->
+              <p>
+                Professional, modern, and responsive websites tailored to your business needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-item" data-index="7">
+          <div class="service-header" tabindex="0" role="button" aria-expanded="false" aria-controls="desc-7">
+            <div class="accent-bar" aria-hidden="true"></div>
+            <div class="service-title">UI/UX design</div>
+            <div class="chev" aria-hidden="true">▾</div>
+          </div>
+          <div id="desc-7" class="service-desc" aria-hidden="true">
+            <div class="inner">
+              <!-- <strong>Service 7 — Overview</strong> -->
+              <p>
+                UI/UX Design – User-friendly and aesthetic digital experiences for apps and websites.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+      
+    </section>
 {% endblock %}

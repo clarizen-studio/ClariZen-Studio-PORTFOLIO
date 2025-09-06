@@ -5,12 +5,12 @@
 .about-page-h-cont{
   color: white;
   font-size: 2.2rem;
-  font-family: verdana light;
-  /* background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  font-family: Segoe UI light;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
   background-clip: text; 
-  color: transparent; */
+  color: transparent;
 }
 
 .about-page-desc{
@@ -27,3 +27,4 @@
   text-align: justify;
     
 }
+/* =============================SERVICES========================================== */

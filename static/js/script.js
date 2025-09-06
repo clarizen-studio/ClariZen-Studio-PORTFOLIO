@@ -27,35 +27,94 @@
                 }
             });
         });
-// ---------------------Animation--------------------------------------
-const skillsTrack = document.querySelector('.skills-track');
-const skillsContainer = document.querySelector('.skills-container');
+// ---------------------Services--------------------------------------
+    // Accordion behavior: single open at a time. Smoothly expand/collapse.
+    (function(){
+      const list = document.getElementById('servicesList');
+      const items = Array.from(list.querySelectorAll('.service-item'));
 
-// Pause on hover
-skillsTrack.addEventListener('mouseenter', function() {
-    skillsContainer.classList.add('pause');
-});
+      function closeItem(item) {
+        const header = item.querySelector('.service-header');
+        const desc = item.querySelector('.service-desc');
+        item.classList.remove('open');
+        header.setAttribute('aria-expanded', 'false');
+        desc.setAttribute('aria-hidden', 'true');
+        // optional: shrink max-height to 0 after transition starts for reliability
+        // desc.style.maxHeight = '0px';
+      }
 
-// Resume when not hovering
-skillsTrack.addEventListener('mouseleave', function() {
-    skillsContainer.classList.remove('pause');
-});
-// Pause-Resume Button
-const Button = document.querySelectorAll("#playPauseBtn");
-let ispause = true;
+      function openItem(item) {
+        const header = item.querySelector('.service-header');
+        const desc = item.querySelector('.service-desc');
+        // close others
+        items.forEach(i => {
+          if (i !== item) closeItem(i);
+        });
 
-Button.forEach((val) => {
-    val.addEventListener("click", () => {
+        // open this
+        item.classList.add('open');
+        header.setAttribute('aria-expanded', 'true');
+        desc.setAttribute('aria-hidden', 'false');
 
-        if(ispause) {
-            skillsContainer.classList.add('pause');
-            Button.innerText = "▶";
-
+        // For better animation with dynamic content: set explicit maxHeight to scrollHeight
+        // so CSS transition animates to exact height.
+        // (we set max-height in CSS to a large value for general case; here we override)
+        const inner = desc.querySelector('.inner');
+        if (inner) {
+          const target = inner.scrollHeight + 20; // small padding
+          desc.style.maxHeight = target + 'px';
+        } else {
+          desc.style.maxHeight = '400px';
         }
-        else{
-            skillsContainer.classList.remove('pause');
-            Button.innerText = "❚❚"
-        }
-        ispause = !ispause;
-    })
-})
+      }
+
+      // Initialize: ensure all closed
+      items.forEach(i => {
+        const desc = i.querySelector('.service-desc');
+        desc.style.maxHeight = '0px';
+        i.classList.remove('open');
+      });
+
+      // Click and key handlers
+      items.forEach(item => {
+        const header = item.querySelector('.service-header');
+        const desc = item.querySelector('.service-desc');
+
+        header.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          if (isOpen) {
+            closeItem(item);
+          } else {
+            openItem(item);
+            // scroll into view if needed (nice UX on small devices)
+            setTimeout(()=>{
+              const rect = item.getBoundingClientRect();
+              if (rect.top < 60 || rect.bottom > (window.innerHeight - 60)) {
+                item.scrollIntoView({behavior:'smooth', block:'start'});
+              }
+            }, 260);
+          }
+        });
+
+        // keyboard accessibility
+        header.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter' || ev.key === ' ') {
+            ev.preventDefault();
+            header.click();
+          }
+        });
+
+        // After transition ends, if closed, remove explicit maxHeight so future open can compute again
+        desc.addEventListener('transitionend', (e) => {
+          if (!item.classList.contains('open')) {
+            desc.style.maxHeight = '0px';
+          } else {
+            // keep it auto-sized to allow content changes (remove explicit height)
+            desc.style.maxHeight = 'none';
+          }
+        });
+      });
+
+      // Optional: open first item by default
+      // openItem(items[0]);
+    })();

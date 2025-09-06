@@ -230,7 +230,7 @@ About US
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   gap: clamp(14px, 1.8vw, 22px);
-  padding: 8rem 3rem 0;
+  padding: 8rem 3rem;
 }
 .h-cont{
   display: flex;
@@ -256,90 +256,110 @@ About US
   color: white;
 
 }
-/* ------------------------Animation---------------------- */
+/* ------------------------SERVICE---------------------- */
+/* Services box */
+.index-services-card {
+  background: linear-gradient(180deg, #07090b 0%, #0f1524 100%);
+  color: #eaf1ff;
+  /* background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); */
+  /* border-radius: 12px; */
+  padding: 14px;
+  /* box-shadow: 0 14px 40px rgba(2,6,16,0.6); */
+  /* border: 1px solid rgba(255,255,255,0.03); */
+  border: 5px solid white;
 
-.skills-container {
-  background-color: black;
-  /* background: linear-gradient(135deg, #7c3aed, #06b6d4); */
-  border: 5px solid rgba(255, 255, 255, 0.925);
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  padding: 20px;
-  margin: 30px 0;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  color: white;
+  /* max-width: 920px;
+  margin: 0 auto; */
 }
-        
-.skills-track {
-  display: flex;
-  gap: 1rem;
-  width: max-content;
-  animation: marquee 10s linear infinite;
-  padding: 15px 0;
 
+/* Accordion list */
+.services-list {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
-        
-.skill {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
+
+.service-item {
+  background: rgba(255,255,255,0.03);
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.img-cont{
-  height: 10rem;
-  width: 15rem;
-  background-color: wheat;
-  border-bottom: 1px solid white;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
   overflow: hidden;
-}
-.img-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.skill-desc{
-  background-color: white;
-  color: black;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.6rem;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  transition: transform 220ms ease;
+  border: 1px solid rgba(255,255,255,0.03);
 }
 
-.skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #2575fc, #6a11cb);
+.service-header {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  cursor:pointer;
+  user-select:none;
+  outline: none;
 }
-@keyframes marquee {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(-50%);
-  }
+.service-header:focus { box-shadow: 0 0 0 4px rgba(99,102,241,0.12); border-radius:10px; }
+
+.service-title {
+  flex:1;
+  font-size:16px;
+  color:#fff;
+  font-weight:600;
 }
 
-.pause .skills-track {
-  animation-play-state: paused;
+.chev {
+  width:36px;
+  height:36px;
+  display:inline-grid;
+  place-items:center;
+  border-radius:8px;
+  color: #bfc7d3;
+  transition: transform 220ms ease, color 180ms;
+  font-size: 1.3rem;
 }
 
-.play-pause-button{
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
+/* Description - collapsed by default */
+.service-desc {
+  padding: 0 16px;
+  color: #bfc7d3;
+  font-size:14px;
+  line-height:1.6;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 320ms ease, padding 200ms ease;
 }
+.service-desc.inner {
+  padding-bottom:14px;
+}
+
+/* When open */
+.service-item.open .service-desc {
+  max-height: 400px; /* large enough for content; adjusts smoothly */
+  padding-top:12px;
+  padding-bottom:14px;
+}
+.service-item.open .chev {
+  transform: rotate(180deg);
+  color:#fff;
+}
+
+/* small decorative accent bar left */
+.accent-bar {
+  width:6px;
+  background: linear-gradient(180deg, #6a11cb, #2575fc);
+  border-radius:4px;
+  margin-right:10px;
+  flex-shrink:0;
+  height:44px;
+}
+
+/* Responsive */
+@media (max-width:600px){
+  .service-header { padding:12px; }
+  .service-desc { padding-left:12px; padding-right:12px; }
+}
+
+/* subtle hover bounce */
+.service-header:hover .service-item { transform: translateY(0px); }
+
 /* ======================================================================
 LOOK SECION
 ========================================================================= */
@@ -474,13 +494,6 @@ LOOK SECION
   .h2 { background: #22c55e; }
   /* .h3 { background: #3b82f6; } */
 
-  /* Optional footer to show page continues */
-  .footer {
-    height: 60vh;
-    display: grid;
-    place-items: center;
-    background: #101826;
-    color: #cfe3ff;
-  }
+
 
 
