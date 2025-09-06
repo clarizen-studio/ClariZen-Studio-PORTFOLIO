@@ -17,6 +17,8 @@
   width: min(65%);
   /* margin-inline: auto; */
   margin: 2rem 0;
+  /* display: flex; */
+  justify-self: center;
   /* background-color: white; */
   background: linear-gradient(135deg, #7c3aed, #06b6d4);
   color: white;

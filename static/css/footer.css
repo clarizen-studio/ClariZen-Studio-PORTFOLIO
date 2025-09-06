@@ -7,7 +7,7 @@
     .site-footer {
       background: linear-gradient(180deg, #16314d 0%, #152245 20%, #0b204a 100%);
       border-top: 1px solid rgba(255,255,255,0.03);
-      padding: 40px 20px;
+      padding: 20px 20px;
     }
     .footer-container {
       max-width: 1200px;
