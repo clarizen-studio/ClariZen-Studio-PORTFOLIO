@@ -1,4 +1,15 @@
 /* ------------------------SERVICE---------------------- */
+.services-page-h{
+    font-size: 5rem;
+    /* color: white; */
+    font-family: Segoe UI light;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    color: transparent;
+    padding: 0 2rem;
+}
 /* Services box */
 .services-card {
     background: linear-gradient(180deg, #07090b 0%, #0f1524 100%);
@@ -12,7 +23,7 @@
     border-radius: 10px;
 
     /* max-width: 920px; */
-    margin: 3rem;
+    margin: 1rem 3rem 3rem;
 }
 
 /* Accordion list */
