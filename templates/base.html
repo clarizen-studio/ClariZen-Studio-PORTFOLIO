@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}"
   <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
@@ -38,5 +39,63 @@
   <main>
     {% block content %}{% endblock %}
   </main>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="row">
+      <!-- About / Brand -->
+      <div class="col" style="flex:1.3">
+        <div class="logo">
+           <img src="../static/images/singlelogo.png" alt="" height="40px">
+          <div>
+            <h4 style="color: #fff; font-size: 16px; letter-spacing: 0.2px;">ClariZen Studio</h4>
+            <p style="color: #bfc7d3; max-width:380px;">
+              Digital solutions — design, development & growth. Reach out for custom projects or collaboration.
+            </p>
+          </div>
+        </div>
+        <div style="margin-top:16px;">
+          <div class="socials">
+            <!-- Add <img> or <i> here for each social -->
+            <a href="#" aria-label="Facebook"><!-- icon -->F</a>
+            <a href="#" aria-label="Instagram"><!-- icon -->I</a>
+            <a href="#" aria-label="LinkedIn"><!-- icon -->L</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="col" style="flex:1">
+        <h4 class="footer-h">Contact</h4>
+        <div class="contact-item"><span class="label">Email</span><a href="mailto:hello@clarizen.studio">hello@clarizen.studio</a></div>
+        <div class="contact-item"><span class="label">Phone</span><a href="tel:+923001234567">+92 310 4584039</a></div>
+        <div style="margin-top:8px;color: #bfc7d3; font-size:13px;">Working hours : Mon - Sat , 9am - 6pm</div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col" style="flex:1">
+        <h4 class="footer-h">Quick Links</h4>
+        <div class="quick-links" aria-hidden="false">
+          <a href="/services">Services</a>
+          <a href="/projects">Projects</a>
+          <a href="/samples">Samples</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/about">About Us</a>
+        </div>
+        <div style="margin-top:14px;color:#bfc7d3; font-size:13px;">
+          <em>Want to work together?</em>
+          <div style="margin-top:8px;">
+            <a class="footer-btn" href="/contact">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright" role="contentinfo">
+      <div>Designed &amp; built by <strong style="color:#000000">ClariZen Studio</strong></div>
+      <div><span>© 2025 ClariZen Studio. All rights reserved.</span></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

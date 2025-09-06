@@ -1,0 +1,29 @@
+.thanks-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+}
+.thanks-h{
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+.thanks-p{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.thanks-btn{
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.thanks-btn:hover {
+    background: #ffdb4d;
+}

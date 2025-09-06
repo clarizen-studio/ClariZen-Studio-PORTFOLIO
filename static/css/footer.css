@@ -1,0 +1,95 @@
+    /* Common footer styles */
+    footer {
+      color: #bfc7d3;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .site-footer {
+      background: linear-gradient(180deg, #16314d 0%, #152245 20%, #0b204a 100%);
+      border-top: 1px solid rgba(255,255,255,0.03);
+      padding: 40px 20px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width:100%;
+    }
+    .row {
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .col {
+      min-width: 220px;
+      flex:1;
+    }
+    .footer-h{
+      margin:0 0 12px 0;
+      color:#fff;
+      font-size:16px;
+      letter-spacing:0.2px;
+    }
+    a {
+      color: #bfc7d3;
+      text-decoration:none;
+    }
+
+    .contact-item { margin-bottom:10px; display:flex; gap:10px; align-items:center; }
+    .contact-item .label { color: #d7e0ff; font-weight:600; font-size:13px; }
+    .socials { display:flex; gap:12px; margin-top:6px; }
+    .socials a { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background: rgba(255,255,255,0.03); }
+    .quick-links { display:flex; gap:14px; flex-wrap:wrap; }
+    .quick-links a { background: rgba(255, 255, 255, 0.08); padding:8px 12px; border-radius:8px; }
+    .quick-links a:hover { color: #fff; text-decoration: underline; }
+
+    /* Copyright bar */
+    .copyright {
+      margin-top:18px;
+      padding:14px 20px;
+      border-radius: 7px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      color: black;
+      font-size:13px;
+      background-color: white;
+    }
+    .copyright span { color: #000000; }
+
+    .footer-a .logo {
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .footer-a .logo h3 {
+      margin:0;
+      color:#fff;
+      font-size:20px;
+      letter-spacing:0.6px;
+    }
+
+    .footer-btn {
+      background: #ffcc00;
+      color: #000;
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      transition: all 0.3s ease;
+    }
+    .footer-btn:hover{
+      background-color: white;
+      color: black;
+    }
+
+
+    /* Responsive */
+    @media (max-width:820px){
+      .col { min-width: 100%; }
+      .copyright { justify-content:center; text-align:center; }
+    }
