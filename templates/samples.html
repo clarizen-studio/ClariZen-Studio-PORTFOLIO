@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="samples-sec">
+  <div class="samples-h-cont">
+    <h1 class="samples-h">Projects</h1>
+    <div class="samples-span">
+      <span>ClariZen Studio's Projects clearly shows;How much passionate are we; in our Work .</span>
+    </div>
+  </div>
+  <!-- Samples Grid ( boxes ) -->
+    <div class="samples-grid">
+    {% for p in projects %}
+      <article class="samples-card">
+          <div class="image-container">
+            <img src="{{ p[3] }}" alt="{{ p[1] }}">
+          </div>
+          <div class="samples-card-body">
+            <span class="samples-title">{{ p[1] }}</span>
+            <span class="samples-desc">{{ p[2] }}</span>
+          </div>
+      </article>
+      {% endfor %}
+    </div>
+</section>
+{% endblock %}
