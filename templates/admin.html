@@ -1,78 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 <span class="anchor-span"><a href="/logout" class="logout-btn">Logout</a></span>
-<h3 class="adp-h">Admin Panel</h3>
-<!-- ==========================  ADD A PROJECT SECTION ================================================= -->
-<section class="admin-project-sec">
-  <div class="addproject-container">
-    <h3 class="addproject-h">Add a Project</h3>
-    <form action="" method="POST" class="addproject-form" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Project Title" required>
-        <textarea name="project description" placeholder="Project Description" required></textarea>
-        <label for="file-upload" class="file-upload-btn">📂 Upload Image</label>
-        <input type="file" name="image" id="file-upload">
-        <button class="addproject-btn">Add</button>
-    </form>
-  </div>
-  <!-- Uploded Projects -->
-  <div class="uploaded-projects-container">
-    <h3 class="addproject-h">Uploaded Projects</h3>
-    <div class="uploaded-projects">
-      {% for p in projects %}
-      <ul>
-            <li>{{ p[1] }}</li>
-            <div class="ul-btns">
-              <a href="#" class="edit-btn">Edit</a>
-              <a href="/delete/{{ p[0] }}" class="delete-btn">Delete</a>
-            </div>
-          </ul>
-          {% endfor %}
-          
+<h3 class="admin-panel-h">Admin Panel</h3>
+<!-- ADMIN PANEL SECTION -->
+ <section class="admin-panel-sec">
+  <h3>Choose the option to Manage</h3>
+    <div class="admin-opt-container">
+        <div class="admin-opt-left">
+          <a href="/admin/projects" class="admin-opt">Manage Projects</a>
+           <a href="/admin/samples" class="admin-opt">Manage Samples</a>
+        </div>
+        <div class="admin-opt-right">
+          <a href="/admin/messages" class="admin-opt">Admin Message Box</a>
+           <a href="/admin/credentials" class="admin-opt">Admin Credentials</a>
+        </div>
     </div>
-  </div>
-</section>
-<!-- ==========================  SAMPLES SECTION  ================================================= -->
-<section class="admin-sample-sec">
-  <div class="addsample-container">
-    <h3 class="addsample-h">Add a Sample</h3>
-    <form action="" method="POST" class="addsample-form" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Sample Title" required>
-        <textarea name="description" placeholder="Description" required></textarea>
-        <label for="file-upload" class="file-upload-btn">📂 Upload Image</label>
-        <input type="file" name="image" id="file-upload">
-        <button class="addsample-btn">Add</button>
-    </form>
-  </div>
-  <!-- Uploaded Samples -->
-  <div class="uploaded-samples-container">
-    <h3 class="addsample-h">Uploaded Samples</h3>
-    <div class="uploaded-samples">
-      {% for p in projects %}
-      <ul>
-            <li>{{ p[1] }}</li>
-            <div class="ul-btns">
-              <a href="#" class="edit-btn">Edit</a>
-              <a href="/delete/{{ p[0] }}" class="delete-btn">Delete</a>
-            </div>
-          </ul>
-          {% endfor %}
-          
-    </div>
-  </div>
-</section>
-<!-- ==========================  MESSAGE BOX  ================================================= -->
-<section class="admin-msg-sec">
-    <h3 class="addproject-h">Message Box</h3>
-  <div class="msg-box-container">
-    {% for m in messages %}
-    <div class="msg-box">
-      <span><strong>Name:</strong> {{ m[1] }} </span>
-      <span><strong>Email Adress:</strong> {{ m[2] }} </span>
-      <span><strong>Message:</strong> {{ m[3] }} </span>
-    </div>
-    {% endfor %}
-  </div>
-</section>
+ </section>
 
 <!-- <h2>Projects</h2>
 <ul>
