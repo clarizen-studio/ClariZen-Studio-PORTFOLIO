@@ -144,7 +144,7 @@ nav a:hover {
   grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(14px, 1.8vw, 22px);
   align-items: center;
-  padding: 58px 0;
+  padding: 45px 0 58px;
   width: min(1100px, 92%);
   margin-inline: auto;
 
@@ -283,6 +283,17 @@ About US
   flex-direction:column;
   gap:12px;
 }
+.services-list h1{
+  text-align: center;
+  font-family: verdana;
+  font-weight: 900;
+  font-size: 5rem;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent;
+}
 
 .service-item {
   background: rgba(255,255,255,0.03);
@@ -381,7 +392,7 @@ LOOK SECION
 }
 .look-h{
   display: inline-flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 .look-h h1{
   color: white;
@@ -395,11 +406,11 @@ LOOK SECION
 }
 
 .look-h-cont span {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   color:#FFBF00;
-  font-size: 10rem;
+  font-size: 5rem;
   font-family: verdana;
  
 }
