@@ -93,7 +93,7 @@ html{
 .form-div img{
     border: 1px solid black;
     border-radius: 7px;
-    width: 150px;
+    max-width: 150px;
 }
 .edit-btn{
     /* width: min-content; */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Sample</title>
+  <link rel="stylesheet" href="../static/css/edit-sample.css">
+</head>
+<body>
+    <section class="edit-sec">
+      <div class="edit-container">
+        <h3 class="edit-h">Edit Project</h3>
+        <form method="POST" enctype="multipart/form-data" class="edit-form">
+            <input type="text" name="title" value="{{project[1]}}" placeholder="Sample Title" required>
+            <textarea name="description" placeholder="Description" required>{{project[2]}}</textarea>
+            <div class="form-div">
+              <label for="file-upload" class="file-upload-btn">📂 Upload Image</label>
+              <input type="file" name="image" id="file-upload">
+              <small><img src="{{project[3]}}" width="100"></small>
+            </div>
+            <button class="edit-btn">Update Sample</button>
+        </form>
+      </div>
+    </section>
+<!-- <div class="container py-5">
+  <h2>Edit Project</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <input type="text" name="title" value="{{project[1]}}" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <textarea name="description" class="form-control" required>{{project[2]}}</textarea>
+    </div>
+    <div class="mb-3">
+      <input type="file" name="image" class="form-control">
+      <small>Current: <img src="{{project[3]}}" width="100"></small>
+    </div>
+    <button type="submit" class="btn btn-success">Update Project</button>
+  </form>
+</div> -->
+</body>
+</html>
