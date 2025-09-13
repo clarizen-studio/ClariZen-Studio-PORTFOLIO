@@ -1,4 +1,10 @@
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MAX-WIDTH = 495
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 @media ( max-width: 495px) {
+/* ==========
+HEADER -max-495
+============= */
 header{
     /* z-index: 100; */
     border-bottom: 1px solid white;
@@ -72,31 +78,77 @@ About Section-max-495
 #h-cont-1{
     display: none;
 }
-/* .look-btns{
-    display: flex;
-    flex-direction: column;
-    
-} */
+/* ===================
+LOOK SECTION
+====================== */
+.look-btns{
+    gap: 1rem;
+}
 .look-btn-1{
-    padding: 15px 20px;
+    padding: 15px;
 }
 .look-btn-2{
-    padding: 15px 20px;
+    padding: 15px;
     
 }
+
+/* ============
+INDEX-SERVICES
+=============== */
+  .service-header { padding:12px; }
+  .service-desc { padding-left:12px; padding-right:12px; }
 }
 
+/* subtle hover bounce */
+.service-header:hover .service-item { transform: translateY(0px);
+/* ==============
+FOOTER
+================= */
+.col { min-width: 100%; }
+.copyright { justify-content:center; text-align:center; }
+/* ================
+Services Page
+=================== */
+.services-card{
+    margin: 1rem 0;
+}
 
+/* ==============
+Samples Page > MAX-495px
+================= */
+  .samples-card{
+    grid-column: span 12;
+  }
+  .samples-grid{
+    margin: 0 2.2rem;
+  }
+/* ==============
+Contact Page > MAX-495px
+================= */
+.contact-page-h4{
+    padding: 8rem 1rem 0 1rem;
+    text-align: left;
+}
+.contact-form-container{
+    padding: 2rem 1rem;
+}
 
+}
 
-
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+MIN-WIDTH = 496PX
+MAX-WIDTH = 840px
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 @media (min-width: 496px) and (max-width: 840px) {
-
+/* BURGER MENU */
 .burger-menu {
     display: flex;
     /* justify-self: end; */
 }
 
+/* ==========
+HEADER
+============= */
 nav {
     display: none;
     width: 100%;
@@ -148,4 +200,20 @@ ABOUT SECTION
 .h-cont{
     font-size: 1rem;
 }
+/* ===================
+LOOK SECTION
+====================== */
+.look-btns{
+    gap: 1rem;
 }
+/* ================
+Services Page
+=================== */
+.services-card{
+    margin: 0 0 2rem;
+}
+
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Samples and Projects Grids
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */

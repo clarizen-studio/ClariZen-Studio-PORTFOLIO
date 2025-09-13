@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Manage Projects</title>
-  <link rel="stylesheet" href="../static/css/admin-projects.css">
+  <link rel="stylesheet" href="../static/css/admin.css">
 </head>
 <body>
     <h1 class="admin-projects-h">Project Management</h1>
@@ -42,33 +42,5 @@
       </div>
 
     </section>
-<!-- <div class="container py-5">
-  <h2>Projects Management</h2>
-  <form method="POST" enctype="multipart/form-data" class="mb-4">
-      <input type="text" name="title" placeholder="Project Title" class="form-control" required>
-      <textarea name="description" placeholder="Description" class="form-control" required></textarea>
-      <input type="file" name="image" class="form-control">
-    <button type="submit" class="btn btn-primary">Add Project</button>
-  </form> -->
-
-  <!-- <h4>All Projects</h4>
-  <table class="table table-bordered" style="color: white;">
-    <tr>
-      <th>ID</th><th>Title</th><th>Description</th><th>Image</th><th>Actions</th>
-    </tr>
-    {% for p in projects %}
-    <tr>
-      <td>{{p[0]}}</td>
-      <td>{{p[1]}}</td>
-      <td>{{p[2]}}</td>
-      <td><img src="{{p[3]}}" alt="img" width="100"></td>
-      <td>
-        <a href="/edit_project/{{p[0]}}" class="btn btn-sm btn-warning">Edit</a>
-        <a href="/delete_project/{{p[0]}}" class="btn btn-sm btn-danger">Delete</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
-</div> -->
 </body>
 </html>

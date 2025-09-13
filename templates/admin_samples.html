@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Manage Samples</title>
-  <link rel="stylesheet" href="../static/css/admin-projects.css">
+  <link rel="stylesheet" href="../static/css/admin.css">
 </head>
 <body>
       <h1 class="admin-projects-h">Sample Management</h1>
@@ -42,39 +42,5 @@
       </div>
 
     </section>
-<!-- <div class="container py-5">
-  <h2>Samples Management</h2>
-  <form method="POST" enctype="multipart/form-data" class="mb-4">
-    <div class="mb-3">
-      <input type="text" name="title" placeholder="Sample Title" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <textarea name="description" placeholder="Description" class="form-control" required></textarea>
-    </div>
-    <div class="mb-3">
-      <input type="file" name="image" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-primary">Add Sample</button>
-  </form>
-
-  <h4>All Samples</h4>
-  <table class="table table-bordered">
-    <tr>
-      <th>ID</th><th>Title</th><th>Description</th><th>Image</th><th>Actions</th>
-    </tr>
-    {% for s in samples %}
-    <tr>
-      <td>{{s[0]}}</td>
-      <td>{{s[1]}}</td>
-      <td>{{s[2]}}</td>
-      <td><img src="{{s[3]}}" alt="img" width="100"></td>
-      <td>
-        <a href="/edit_sample/{{s[0]}}" class="btn btn-sm btn-warning">Edit</a>
-        <a href="/delete_sample/{{s[0]}}" class="btn btn-sm btn-danger">Delete</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
-</div> -->
 </body>
 </html>
