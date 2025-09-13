@@ -520,7 +520,7 @@ ABOUT.html STYLINGS
 }
 
 .about-page-desc{
-  width: min(65%);
+  width: min(85%);
   /* margin-inline: auto; */
   margin: 2rem 0;
   justify-self: center;
@@ -719,7 +719,8 @@ Samples-PAGE STYLING
     grid-column: span 12;
   }
   .samples-grid{
-    margin: 0 2.2rem 1rem;
+    margin: 0 2.2rem;
+    padding-bottom: 2rem;
   }
 }
 @media (min-width: 496px) and (max-width: 640px) {
@@ -967,4 +968,4 @@ Thank You-PAGE STYLING
     background: white;
     color: black;
 }
-
+/* ################################################################################# */

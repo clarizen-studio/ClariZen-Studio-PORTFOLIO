@@ -97,20 +97,25 @@ INDEX-SERVICES
 =============== */
   .service-header { padding:12px; }
   .service-desc { padding-left:12px; padding-right:12px; }
-}
+
 
 /* subtle hover bounce */
-.service-header:hover .service-item { transform: translateY(0px);
+.service-header:hover .service-item { transform: translateY(0px);}
 /* ==============
 FOOTER
 ================= */
-.col { min-width: 100%; }
-.copyright { justify-content:center; text-align:center; }
+.col { 
+    min-width: 100%; 
+}
+.copyright { 
+    justify-content:center;
+    text-align:center;
+}
 /* ================
 Services Page
 =================== */
 .services-card{
-    margin: 1rem 0;
+    margin: 0 0 2rem;
 }
 
 /* ==============
@@ -131,6 +136,13 @@ Contact Page > MAX-495px
 }
 .contact-form-container{
     padding: 2rem 1rem;
+}
+/* ==============
+About Us Page > MAX-495px
+================= */
+.about-page-desc{
+    width: min(90%);
+    text-align: left;
 }
 
 }
